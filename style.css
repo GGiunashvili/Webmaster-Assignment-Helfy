@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
 .top-bar {
   background-color: #0b0f12;
   color: #ffffff;
@@ -84,4 +90,140 @@
   height: 35px;
   width: auto;
   display: block;
+}
+
+.hero-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40px 20px;
+}
+
+.hero-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Suratis bloki */
+.hero-media {
+  background-color: #eaf4ee; /* Ghia mtsvane fonis feri */
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Kontenti */
+.hero-title {
+  font-size: 70px;
+  font-weight: semibold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  color: #08080a;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+/* Benefits sia */
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-benefits li {
+  background-color: #f4f9f5;
+  padding: 12px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: medium;
+  color: #08080a;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* CTA Ghilaki */
+.hero-cta {
+  display: inline-block;
+  background-color: #135238; /* Muqi mtsvane */
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.hero-cta:hover {
+  background-color: #0d3b28;
+}
+
+/* Rating */
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.rating-badge {
+  width: 32px;
+  height: 32px;
+}
+
+.stars {
+  color: #ffb800;
+  margin-left: 4px;
+}
+.hero-content {
+  max-width: 667px;
+}
+
+/* Mobile Responsive (390px) */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-media {
+    order: 2;
+  }
+
+  .hero-content {
+    order: 1;
+  }
 }
