@@ -15,14 +15,14 @@
     system-ui,
     -apple-system,
     sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   overflow: hidden;
   border-bottom: 1px solid #1a202c;
 }
 
 .top-bar-title {
   padding: 0 20px;
-  font-weight: 600;
+  font-weight: 400;
   white-space: nowrap;
   border-right: 1px solid #333a42;
   height: 100%;
@@ -47,7 +47,7 @@
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 34px;
   padding: 0 16px;
 }
 
@@ -56,8 +56,17 @@
   align-items: center;
   gap: 8px;
   color: #e2e8f0;
+  font-size: 12px;
 }
-
+.bar-item-box {
+  background-color: #3d404d;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
 .bar-icon {
   width: 18px;
   height: 18px;
