@@ -79,17 +79,23 @@
 .main-header {
   width: 100%;
   background-color: #ffffff;
-  padding: 28px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
+  background: black;
 }
 
 .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  padding: 28px 0;
+
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
 .logo-link {
@@ -118,8 +124,7 @@
 
 /* Suratis bloki */
 .hero-media {
-  background-color: #eaf4ee; /* Ghia mtsvane fonis feri */
-  border-radius: 24px;
+  background-color: #eaf4ee;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -136,15 +141,16 @@
 /* Kontenti */
 .hero-title {
   font-size: 70px;
-  font-weight: semibold;
+  font-weight: 600;
   color: #000000;
   margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .hero-subtitle {
   font-size: 22px;
   color: #08080a;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 400;
 }
 
@@ -155,7 +161,7 @@
   margin: 0 0 28px 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hero-benefits li {
@@ -167,8 +173,9 @@
   gap: 12px;
   font-size: 20px;
   font-weight: 400;
-  font-style: medium;
+  font-style: regular;
   color: #08080a;
+  font-size: 20px;
 }
 
 .check-icon {
@@ -182,14 +189,14 @@
   display: inline-block;
   background-color: #135238; /* Muqi mtsvane */
   color: #ffffff;
-  padding: 16px 32px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
+  padding: 14px 40px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
   text-decoration: none;
   text-align: center;
   transition: background-color 0.2s ease;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .hero-cta:hover {
@@ -199,14 +206,19 @@
 /* Rating */
 .hero-rating {
   display: flex;
-  align-items: center;
+  text-align: left;
   gap: 12px;
-  font-size: 13px;
+  font-size: 19px;
+  display: flex;
+  font-weight: 400;
+}
+.rating-mobile {
+  display: none;
 }
 
 .rating-badge {
-  width: 32px;
-  height: 32px;
+  max-width: 54px;
+  max-height: 54px;
 }
 
 .stars {
@@ -215,7 +227,14 @@
 }
 
 .hero-content {
-  max-width: 667px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.hero-content-child {
+  max-width: 678px;
 }
 
 /* Reviews Section */
@@ -685,9 +704,30 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
-
+  .hero-rating {
+    display: none;
+  }
+  .rating-mobile {
+    display: flex;
+  }
+  .rating-info-mobile {
+    display: flex;
+  }
+  .hero-cta {
+    position: fixed;
+    z-index: 999;
+    width: 90%;
+    /* transform: translate(-20%); */
+    bottom: 56px;
+  }
   .hero-title {
-    font-size: 28px;
+    font-size: 36px;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .hero-benefits li {
+    font-size: 16px;
   }
 
   .hero-media {
