@@ -1,0 +1,87 @@
+.top-bar {
+  background-color: #0b0f12;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+  border-bottom: 1px solid #1a202c;
+}
+
+.top-bar-title {
+  padding: 0 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-right: 1px solid #333a42;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #0b0f12;
+  z-index: 2;
+}
+
+.top-bar-marquee {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.top-bar-marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 16px;
+}
+
+.bar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+}
+
+.bar-icon {
+  width: 18px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.main-header {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.site-logo {
+  height: 35px;
+  width: auto;
+  display: block;
+}
