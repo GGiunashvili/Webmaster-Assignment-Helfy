@@ -242,7 +242,7 @@
 
 .reviews-track {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   transition: transform 0.3s ease-in-out;
   scroll-behavior: smooth;
 }
@@ -398,15 +398,16 @@
 
 .steps-track {
   display: flex;
-  gap: 36px;
+  gap: 20px;
   justify-content: center;
   transition: transform 0.3s ease-in-out;
 }
 
-/* Step Card (გვერდითი ბარათები 1 და 3) */
+/* Step Card - რესპონსიული სიგანე პიქსელების ნაცვლად */
 .step-card {
-  flex: 0 0 438px;
-  width: 438px;
+  flex: 1 1 30%;
+  max-width: 438px;
+  width: 100%;
   height: 440px;
   background: linear-gradient(
     180deg,
@@ -423,7 +424,7 @@
   box-shadow: 0px 14.08px 276.3px rgba(0, 137, 53, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  overflow: visible; /* შეიცვალა overflow: hidden-დან, რომ 1, 2, 3 ციფრები გამოჩნდეს */
+  overflow: visible;
 }
 
 /* Step Badge Number */
@@ -651,14 +652,15 @@
   }
 
   .step-card:nth-child(2) {
-    flex: 0 0 500px;
-    width: 500px;
+    flex: 1.1 1 34%;
+    max-width: 500px;
+    width: 100%;
     height: 527px;
   }
 }
 
 /* ==========================================
-   Responsive & Media Queries
+   Responsive & Media Queries (შესწორებული)
    ========================================== */
 @media (max-width: 1200px) {
   .hero-section {
@@ -698,14 +700,15 @@
 
   .steps-track {
     justify-content: flex-start;
-    gap: 0;
+    gap: 20px;
   }
 
+  /* მობილურზე ბარათები იღებენ 82%-ს, რომ მეორე სლაიდერიც გამოჩნდეს */
   .step-card,
   .step-card:nth-child(2) {
-    flex: 0 0 100%;
-    width: 100%;
-    max-width: 100%;
+    flex: 0 0 82%;
+    width: 82%;
+    max-width: 82%;
     height: auto;
     min-height: 420px;
   }
@@ -715,7 +718,8 @@
   }
 
   .review-card {
-    flex: 0 0 calc(50% - 10px);
+    flex: 0 0 82%;
+    max-width: 82%;
   }
 
   .reviews-title {
@@ -745,7 +749,8 @@
 
 @media (max-width: 600px) {
   .review-card {
-    flex: 0 0 100%;
+    flex: 0 0 82%;
+    max-width: 82%;
   }
 
   .reviews-title {
