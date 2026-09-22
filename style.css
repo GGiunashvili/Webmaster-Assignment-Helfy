@@ -69,7 +69,7 @@
 .main-header {
   width: 100%;
   background-color: #ffffff;
-  padding: 16px 0;
+  padding: 28px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,7 +95,6 @@
 .hero-section {
   width: 100%;
   background-color: #ffffff;
-  padding: 40px 20px;
 }
 
 .hero-container {
@@ -225,5 +224,172 @@
 
   .hero-content {
     order: 1;
+  }
+}
+
+.reviews-section {
+  width: 100%;
+  background-color: #f6f9f6;
+  padding: 60px 20px;
+}
+
+.reviews-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.reviews-title {
+  font-size: 42px;
+  font-weight: 500;
+  color: #1f2129;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.reviews-title .highlight {
+  color: #00875a; /* Mtsvane feris akcenti */
+  font-weight: 600;
+}
+
+/* Carousel Layout */
+.reviews-carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.reviews-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.3s ease-in-out;
+  scroll-behavior: smooth;
+}
+
+/* Card */
+.review-card {
+  flex: 0 0 calc(25% - 15px); /* Desktop: 4 barati ert rigshi */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  min-height: 280px;
+}
+
+.author-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2129;
+  margin-bottom: 4px;
+}
+
+.review-date {
+  font-size: 13px;
+  color: #8c919e;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.review-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1f2129;
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+.review-text .green-text {
+  color: #00875a;
+  font-weight: 500;
+}
+
+/* Verified badge */
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #525866;
+}
+
+.check-badge-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Controls */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dot.active {
+  background-color: #00875a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+  .review-card {
+    flex: 0 0 calc(33.333% - 14px); /* Tablet Landscape: 3 barati */
+  }
+}
+
+@media (max-width: 900px) {
+  .review-card {
+    flex: 0 0 calc(50% - 10px); /* Tablet Portrait: 2 barati */
+  }
+  .reviews-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .review-card {
+    flex: 0 0 100%; /* Mobile: 1 barati */
+  }
+  .reviews-title {
+    font-size: 26px;
   }
 }
